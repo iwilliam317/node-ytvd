@@ -12,6 +12,10 @@ const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`App is running on port ${port}`));
 
-//example
+//download example
 // ytdl('http://www.youtube.com/watch?v=A02s8omM_hI')
 //   .pipe(fs.createWriteStream('video.flv'));
+
+// gets url from a given url
+// const url = 'http://www.youtube.com/watch?v=A02s8omM_hI'
+// console.log(ytdl.getURLVideoID(url))
