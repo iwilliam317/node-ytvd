@@ -15,8 +15,14 @@ app.listen(port, () => console.log(`App is running on port ${port}`));
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 
-app.post('/download', async (req, res) => {
-  res.send('downloading');
+app.post('/download', (req, res) => {
+  const url = req.body.url;
+  if (url === "") 
+    return res.send("Invalid URL");
+
+  ytdl(url)
+  .pipe(fs.createWriteStream('video.flv'));
+
 });
 
 //download example
