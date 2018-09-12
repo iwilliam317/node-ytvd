@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const ytdl = require('ytdl-core');
 const bodyParser = require('body-parser');
+const path = require('path')
 
 const app = express();
 
@@ -11,6 +12,8 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`App is running on port ${port}`));
+
+app.use('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 
 //download example
 // ytdl('http://www.youtube.com/watch?v=A02s8omM_hI')
