@@ -13,7 +13,11 @@ const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`App is running on port ${port}`));
 
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+
+app.post('/download', async (req, res) => {
+  res.send('downloading');
+});
 
 //download example
 // ytdl('http://www.youtube.com/watch?v=A02s8omM_hI')
