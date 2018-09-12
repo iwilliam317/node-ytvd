@@ -3,8 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <meta name="description" content="Easy way to download videos from youtube" >
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
 </head>
 <body>
-  Hey
+
+  <div class="block">
+    <section class="hero is-primary">
+      <div class="hero-body">
+        
+        <div class="container">
+          <h1 class="title">node-ytdt - Youtube Download Videos</h1>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-body">        
+        <div class="container">        
+          <form action="/download" method="post">
+            <div class="field has-addons">
+              <p class="control">
+                <input type="text" class="input" id="url" placeholder="Paste the youtube URL">
+              </p>
+
+              <p class="control">
+                <button class="button is-success">Download</button>
+              </p>
+            </div>
+          </form>
+        </div>        
+      </div>
+    </section>
+  </div>
+
+  <div class="block">
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        <span>View on <a href="https://github.com/iwilliam317/node-ytvd" target="_blank"><i class="fa fa-github"></i> Github</a></span>
+      </p>
+    </footer>
+  </div>
+
 </body>
 </html>
