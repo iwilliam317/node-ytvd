@@ -21,7 +21,7 @@ app.post('/download', (req, res) => {
     return res.send("Invalid URL");
 
   ytdl(url)
-  .pipe(fs.createWriteStream('video.flv'));
+  .pipe(fs.createWriteStream(path.join(__dirname, 'videos', 'video.flv')));
 
 });
 
